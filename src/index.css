@@ -6,4 +6,12 @@ body {
 .formCard {
   background-color: rgba(255, 255, 255, 0.708);
   backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 500px;
+}
+
+.hero {
+  min-height: 100vh;
+  height: max-content;
+  overflow-y: scroll;
 }
