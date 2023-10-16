@@ -3,11 +3,12 @@ import { Route, Routes } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login.jsx/Login";
 import SignIn from "./pages/SignIn.jsx/SignIn";
+import Home from "./pages/Home/Home";
 
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={"Accueil"} />
+      <Route path="/" element={<Home />} />
       <Route path="se-connecter" element={<Login />} />
       <Route path="s-inscrire" element={<SignIn />} />
       <Route path="*" element={<NotFound />} />
