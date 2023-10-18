@@ -9,7 +9,7 @@ export default function Header() {
   const navigate = useNavigate();
 
   //State de connexion
-  const [isLogged, setIsLoggedIn] = useState(true);
+  const [isLogged, setIsLoggedIn] = useState(false);
 
   //Block menu
   const start = (
@@ -50,7 +50,7 @@ export default function Header() {
     </div>
   ) : (
     <div>
-      <Button label="Se connecter" icon={"pi pi-sign-in"} />
+      <Button label="Se connecter" icon={"pi pi-sign-in"} onClick={() => navigate('/se-connecter')} />
     </div>
   );
 

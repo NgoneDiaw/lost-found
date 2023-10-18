@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
-    <div className="hero h-screen flex align-items-center justify-content-center p-3">
+    <div id="heroStyle" className="hero h-screen flex align-items-center justify-content-center p-3">
       <Card className="formCard">
         <div className=" flex flex-column align-items-center">
           <Link to={"/"}>
