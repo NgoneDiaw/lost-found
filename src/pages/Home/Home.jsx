@@ -5,8 +5,10 @@ import lost from "./assets/lost.png";
 import { InputText } from "primereact/inputtext";
 import { InputTextarea } from "primereact/inputtextarea";
 import Footer from "./components/Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <>
       <Header />
@@ -25,11 +27,13 @@ export default function Home() {
                 className="w-full"
                 icon={"pi pi-search"}
                 label="Déclarer un objet perdu"
+                onClick={() => navigate('/declarer-un-objet-perdu')}
               />
               <Button
                 className="w-full"
                 icon={"pi pi-megaphone"}
                 label="Signaler un objet trouvé"
+                onClick={() => navigate('/signaler-un-objet-trouve')}
                 outlined
               />
             </div>
@@ -47,7 +51,7 @@ export default function Home() {
               Trop facile de trouver un objet
             </p>
             <div className="m-auto mt-5 flex flex-column md:flex-row gap-3 lg:gap-5">
-              <div className="mb-5">
+              <div className="flex-1 mb-5">
                 <i className="text-5xl pi pi-megaphone w-full text-center"></i>
                 <h2 className="w-full text-center">
                   Déclarer un objet perdu ou signaler un objet trouvé
@@ -55,29 +59,27 @@ export default function Home() {
                 <p className="text-center">
                   Remplissez le formulaire de déclaration en donnant un maximum
                   de détails (sur le lieu de perte, le type de l’objet, sa
-                  description, sa photo) pour aider l’algorithme à l’identifier
-                  rapidement
+                  description, sa photo) pour aider l’algorithme à l’identifier rapidement
                 </p>
               </div>
-              <div className="mb-5">
+              <div className="flex-1 mb-5">
                 <i className="text-5xl pi pi-bookmark w-full text-center"></i>
                 <h2 className="w-full text-center">
                   Prouvez la propriété de votre objet
                 </h2>
                 <p className="text-center">
-                  Une fois l’objet perdu « matché », prouvez qui vous êtes grâce
-                  à une question de sécurité (ex : décrivez la coque de votre
-                  téléphone, …). Ainsi, notre partenaire qui a retrouvé cet
-                  objet pourra valider sereinement qu’il s’agit de votre objet
+                  Pour prouver la propriété de l’objet, un lot d’images vous
+                  sera fourni puis vous choisissez celle correspondante à votre
+                  objet.
                 </p>
               </div>
-              <div className="mb-5">
+              <div className="flex-1 mb-5">
                 <i className="text-5xl pi pi-check w-full text-center"></i>
                 <h2 className="w-full text-center">Récupérez-le !</h2>
                 <p className="text-center">
-                  Dès que vous êtes authentifié, vous recevez les informations
-                  pour passer le récupérer ou vous faire livrer. Pensez à bien
-                  communiquer le numéro de référence trouvé
+                  Dès que vous êtes authentifié, vous serez contacté par celui
+                  qui l’a ramassé pour des informations concernant la
+                  récupération de l’objet
                 </p>
               </div>
             </div>

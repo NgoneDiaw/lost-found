@@ -31,6 +31,21 @@ export default function Header() {
     },
     { label: "Se deconnecter", icon: "pi pi-power-off", command: () => {} },
   ];
+  const menuItems = [
+    {
+      label: "Accueil",
+      icon: "pi pi-home",
+      url: "/"
+    },
+    {
+      label: "Messagerie",
+      icon: "pi pi-envelope",
+    },
+    {
+      label: "Conditions",
+      icon: "pi pi-info",
+    },
+  ];
   const end = isLogged ? (
     <div>
       <Menu
@@ -50,13 +65,17 @@ export default function Header() {
     </div>
   ) : (
     <div>
-      <Button label="Se connecter" icon={"pi pi-sign-in"} onClick={() => navigate('/se-connecter')} />
+      <Button
+        label="Se connecter"
+        icon={"pi pi-sign-in"}
+        onClick={() => navigate("/se-connecter")}
+      />
     </div>
   );
 
   return (
-    <header>
-      <Menubar start={start} end={end} />
+    <header className="sticky top-0 z-5 shadow-1">
+      <Menubar model={menuItems} start={start} end={end} />
     </header>
   );
 }
