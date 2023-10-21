@@ -53,10 +53,10 @@ export default function TemplateDemo() {
         return "danger";
 
       case "TROUVÉ":
-        return "success";
+        return "warning";
 
-      case "OUTOFSTOCK":
-        return "danger";
+      case "RENDU":
+        return "success";
 
       default:
         return null;
@@ -84,13 +84,14 @@ export default function TemplateDemo() {
           paginator
           rows={5}
         >
-          <Column field="category" header="Catégories"></Column>
-          <Column field="name" header="Marques"></Column>
+          <Column field="category" header="Catégorie"></Column>
+          <Column field="name" header="Marque"></Column>
           <Column header="Image" body={imageBodyTemplate}></Column>
-          <Column header="Status" body={statusBodyTemplate}></Column>
+          <Column header="Couleur" field="color"></Column>
+          <Column header="Etat" body={statusBodyTemplate}></Column>
           <Column header="Lieu" field="loc"></Column>
           <Column body={(product) => {
-            return (<Button label="Désactiver"></Button>)
+            return (<Button link label="Editer"></Button>)
           }}></Column>
         </DataTable>
       </div>

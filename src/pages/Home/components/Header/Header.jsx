@@ -9,7 +9,7 @@ export default function Header() {
   const navigate = useNavigate();
 
   //State de connexion
-  const [isLogged, setIsLoggedIn] = useState(false);
+  const [isLogged, setIsLoggedIn] = useState(true);
 
   //Block menu
   const start = (

@@ -16,8 +16,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/declarer-un-objet-perdu" element={<Lost />} />
-      <Route path="/signaler-un-objet-trouve" element={<Found />} />
+      <Route path="/signaler-un-objet" element={<Found />} />
       <Route path="se-connecter" element={<Login />} />
       <Route path="s-inscrire" element={<SignIn />} />
       <Route path="admin" element={<Admin />}>

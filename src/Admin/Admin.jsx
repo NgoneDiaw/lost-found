@@ -28,7 +28,7 @@ export default function Admin() {
           }}
           className={active == "users" ? "active" : ""}
         >
-          <i className="pi pi-users"></i> Utilisateurs
+          <i className="pi pi-users"></i> Abonnés
         </a>
         <a
           onClick={() => {

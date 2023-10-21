@@ -1,20 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Home/components/Header/Header";
 import Footer from "../Home/components/Footer/Footer";
 import { InputText } from "primereact/inputtext";
 import { Calendar } from "primereact/calendar";
 import { FileUpload } from "primereact/fileupload";
 import { Button } from "primereact/button";
+import { SelectButton } from "primereact/selectbutton";
 
 export default function Found() {
+  const options = ["J'ai trouvé", "J'ai perdu"];
+  const [value, setValue] = useState(options[0]);
   return (
     <>
       <Header />
       <main className="p-3 min-h-screen">
         <section>
-          <h1 className="text-4xl text-center">Signaler un objet trouvé</h1>
           <div className="h-full">
             <form className="grid m-auto">
+              <div className="col-12">
+                <h1 className="text-4xl">Signaler un objet</h1>
+              </div>
+              <div className="col-12">
+                <SelectButton
+                  value={value}
+                  onChange={(e) => setValue(e.value)}
+                  options={options}
+                  className="flex gap-3"
+                />
+              </div>
               <h2 className="col-12">Comment vous joindre?</h2>
               <div className="md:col-6 flex flex-column gap-2 mb-3">
                 <label>Comment vous appelez vous?</label>
@@ -32,9 +45,9 @@ export default function Found() {
                 <label>Votre adresse</label>
                 <InputText />
               </div>
-              <h2 className="col-12">Information sur l'objet trouvé</h2>
+              <h2 className="col-12">Information sur l'objet</h2>
               <div className="md:col-6 flex flex-column gap-2 mb-3">
-                <label>Qu'avez vous trouvé?</label>
+                <label>De quel objet sagit-il?</label>
                 <InputText />
               </div>
               <div className="md:col-6 flex flex-column gap-2 mb-3">
@@ -46,7 +59,7 @@ export default function Found() {
                 <InputText />
               </div>
               <div className="md:col-6 flex flex-column gap-2 mb-3">
-                <label>À quel date l'avez vous trouvé?</label>
+                <label>À quel date?</label>
                 <Calendar dateFormat="dd/mm/yy" showTime />
               </div>
               <div className="md:col-12 flex flex-column gap-2 mb-3">
@@ -70,14 +83,14 @@ export default function Found() {
                         }}
                         className="my-5"
                       >
-                        Ajoutez une image de l'objet trouvé ici
+                        Ajoutez une image de l'objet ici
                       </span>
                     </div>
                   }
                 />
               </div>
               <div className="col-12 text-center">
-                <Button icon={"pi pi-search"} label="Signaler l'objet trouvé" />
+                <Button icon={"pi pi-search"} label="Signaler l'objet" />
               </div>
             </form>
           </div>

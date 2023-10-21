@@ -7,10 +7,6 @@ body {
 
 }
 
-* {
-  font-weight: 300;
-}
-
 .formCard {
   background-color: rgba(255, 255, 255, 0.708);
   backdrop-filter: blur(10px);

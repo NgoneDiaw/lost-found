@@ -25,15 +25,9 @@ export default function Home() {
             <div className="flex flex-column md:flex-row gap-3 w-full ">
               <Button
                 className="w-full"
-                icon={"pi pi-search"}
-                label="Déclarer un objet perdu"
-                onClick={() => navigate('/declarer-un-objet-perdu')}
-              />
-              <Button
-                className="w-full"
                 icon={"pi pi-megaphone"}
-                label="Signaler un objet trouvé"
-                onClick={() => navigate('/signaler-un-objet-trouve')}
+                label="Signaler un objet"
+                onClick={() => navigate('/signaler-un-objet')}
                 outlined
               />
             </div>

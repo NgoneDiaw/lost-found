@@ -12,7 +12,8 @@ export const ProductService = {
         quantity: 24,
         inventoryStatus: "TROUVÉ",
         rating: 5,
-        loc: "Dakar Médina Rue 11"
+        loc: "Dakar Médina Rue 11, Dakar",
+        color: "Beige"
       },
       {
         id: "1001",
@@ -23,9 +24,10 @@ export const ProductService = {
         price: 72,
         category: "Accessoires",
         quantity: 61,
-        inventoryStatus: "DÉSACTIVÉ",
+        inventoryStatus: "RENDU",
         rating: 4,
-        loc: "Patte d'oie sous la passerelle"
+        loc: "Patte d'oie sous la passerelle, Dakar",
+        color: "Noir"
       },
       {
         id: "1002",
@@ -38,7 +40,9 @@ export const ProductService = {
         quantity: 2,
         inventoryStatus: "PERDU",
         rating: 3,
-        loc: "Bountou Pikine"
+        loc: "Route de Mbadane",
+        color: " Bleu"
+
       },
       {
         id: "1003",
@@ -51,7 +55,8 @@ export const ProductService = {
         quantity: 25,
         inventoryStatus: "PERDU",
         rating: 5,
-        loc: "Grand Dakar, près du marché"
+        loc: "Grand Thies, près du marché",
+        color: "Bleu de nuit"
       },
       {
         id: "1004",
@@ -64,7 +69,8 @@ export const ProductService = {
         quantity: 73,
         inventoryStatus: "PERDU",
         rating: 4,
-        loc: "Sahm, Arrêt car-rapide"
+        loc: "Sahm, Arrêt car-rapide",
+        color: "Noir"
       },
       {
         id: "1005",
